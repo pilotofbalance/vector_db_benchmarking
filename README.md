@@ -1,16 +1,17 @@
 # Vector Databese Benchmarking
 
 In this POC we gonna compare most popular vector databases and libraries.
-FAISS  - semantic search library
-CHROMA - popular open-source vector database
-MILVUS - mature open-source vector database
+**FAISS**  - semantic search library
+**CHROMA** - popular open-source vector database
+**MILVUS** - mature open-source vector database
 
 ## Prepare embeddings
 
 Our "embedings" folder already contain "train_set.json" file with 135k radiology medical reports.
 This set has been embedded to the vectors with "test.py" code with popular semantic search 
 trained model: "sentence-transformers/all-MiniLM-L6-v2". This transformation produced "sample.json" file
-which we gonna use and inject to our vector databases.
+which we gonna use and inject to our vector databases. 
+**The "sample.json" file is not included here for size reasons.FYI transformation could take around 2 hours and produce more then 1gb "sample.json" file.**
 
 You can use your own dataset and run transformation to the vectors with this command:
 
