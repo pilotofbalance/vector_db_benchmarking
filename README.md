@@ -1,9 +1,10 @@
 # Vector Databese Benchmarking
 
 In this POC we gonna compare most popular vector databases and libraries.
-**FAISS**  - semantic search library
-**CHROMA** - popular open-source vector database
-**MILVUS** - mature open-source vector database
+- **FAISS**  - semantic search library
+- **CHROMA** - popular open-source vector database
+- **MILVUS** - mature open-source vector database
+
 
 ## Prepare embeddings
 
