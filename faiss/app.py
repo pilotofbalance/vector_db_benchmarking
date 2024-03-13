@@ -38,11 +38,14 @@ def load_index():
  
     # Create an index in Faiss
     dimension = len(vectors[0])  # Dimension of the vectors
-    index = faiss.IndexHNSWFlat(dimension, 16)
+     # index = faiss.IndexHNSWFlat(dimension, 16)
+    index = faiss.index_factory(dimension, "HNSW32,Flat", faiss.METRIC_INNER_PRODUCT)
+    index.hnsw.M = 16
     index.hnsw.efConstruction = 500
     index.hnsw.efSearch = 200
     # Set the metric to Cosine Similarity
-    index.metric_type = faiss.METRIC_INNER_PRODUCT
+    # index.metric_type = faiss.METRIC_INNER_PRODUCT
+    print(faiss.__version__)
     print(index.is_trained)
     start = time.time()
     print("START TIME: ",start) 
